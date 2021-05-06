@@ -18,6 +18,15 @@ module.exports = function (api) {
  
     // for each content found create a page
     data.allStoryblokEntry.edges.forEach(({ node }) => {
+      if (node.full_slug === 'home') {
+        createPage({
+          path: '/',
+          component: './src/templates/StoryblokEntry.vue',
+          context: {
+            id: node.id
+          }
+        })
+      }
       createPage({
         path: `/${node.full_slug}`,
         component: './src/templates/StoryblokEntry.vue',
