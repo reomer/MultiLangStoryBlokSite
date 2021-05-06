@@ -1,0 +1,14 @@
+{
+  "name": "mygridsome",
+  "private": true,
+  "scripts": {
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "gridsome": "^0.7.0",
+    "gridsome-source-storyblok": "^2.0.0"
+  }
+}
