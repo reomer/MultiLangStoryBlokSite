@@ -11,7 +11,7 @@ module.exports = {
       use: 'gridsome-source-storyblok',
       options: {
         client: {
-          accessToken: 'z711hPSygiQy13EXbPLviAtt' // you must be replace with your token
+          accessToken: 'mBDrO1IORtNxqQClaNpwfwtt' // you must be replace with your token
         },
         version: 'draft',
         typeName: 'StoryblokEntry'
