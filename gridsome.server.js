@@ -4,7 +4,7 @@ module.exports = function (api) {
   })
  
   api.createPages(async ({ graphql, createPage }) => {
-    // load data from Storyblok API
+    // load data from Storblok API
     const { data } = await graphql(`{
       allStoryblokEntry {
         edges {
