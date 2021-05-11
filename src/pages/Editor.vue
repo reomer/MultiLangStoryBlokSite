@@ -65,9 +65,12 @@ export default {
     initStoryblokEvents() {
       this.loadStory()
       let sb = window.storyblok
+      sb.on(['change', 'published'], () => {
+       sb.reload(true)})
       sb.on(['change', 'published'], (payload) => {
         this.loadStory()
       })
+      
       sb.on('input', (payload) => {
         if (this.story && payload.story.id === this.story.id) {
           payload.story.content = sb.addComments(payload.story.content, payload.story.id)
@@ -80,6 +83,7 @@ export default {
         }
       })
     }
+    
   }
 }
 </script>
